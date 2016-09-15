@@ -1,0 +1,53 @@
+﻿@model IEnumerable<PokemonJuego.Models.Pokemon>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vida)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.power)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Picture)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+
+        <td>
+            <img src=@Html.DisplayFor(modelItem => item.Picture) width="200" height="300">
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vida)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.power)
+        </td>
+       
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.pokemon_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.pokemon_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.pokemon_id })
+        </td>
+    </tr>
+}
+
+</table>

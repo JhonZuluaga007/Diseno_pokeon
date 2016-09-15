@@ -1,0 +1,57 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+body{
+    background-color:greenyellow;
+}
+#pokemon{
+    position:absolute;
+}
+#pokemon2{
+    position:absolute;
+    left:1000px;
+}
+.barrita{
+    position:relative;
+    width:200px;   
+}
+.pelea{
+    width:1150px;
+    height:250px;
+    border: solid 2px black;
+    background-image:url("http://images4.wikia.nocookie.net/__cb20120105194727/es.pokemon/images/6/68/EP723_Campo_de_Batalla_del_Gimnasio_Fayenza.jpg")
+}
+#boton{
+    width:200px;
+    height:90px;
+    font-size:20px;
+}
+#campo{
+    width:1150px;
+    height:700px;
+}
+#tienda{
+    position:absolute;
+    left:800px;
+}

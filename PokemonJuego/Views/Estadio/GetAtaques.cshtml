@@ -1,0 +1,77 @@
+﻿@model IEnumerable<PokemonJuego.Models.Pokemon>
+@{
+    ViewBag.Title = "GetAtaques";
+}
+
+<h2>GetAtaques</h2>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<link href="~/Content/Site.css" rel="stylesheet" />
+<script>
+    $(document).ready(inicio);
+        function inicio (){
+            $("#atacar").click(onAtacar);
+        }
+        function onAtacar(){
+            $("#pokemon").animate({ left: '500px' }, 1000, onRegresa);
+            $("#pokemon2").animate({ left: '500px' }, 1000, onRegresa);
+        }
+        function onRegresa(){
+            $("#pokemon").animate({ left: '0px' }, 1000);
+            $("#pokemon2").animate({ left: '1000px' }, 1000);
+        }
+        function restar() {
+            $("#")
+        }
+
+        $('body').on('click', '[data-url]', function () {
+            $.ajax({
+                method: 'POST',
+                url: $(this).data('url')
+            })
+            .done(function (data) {
+                $('#poks').hide();
+                $('#poks').html(data);
+                $('#poks').show('fast');
+            });
+        })
+
+
+
+
+</script>
+
+@foreach (var item in Model)
+{
+<div class="row">
+    <div id="titulo">
+        <img id="titulo" src="http://vignette1.wikia.nocookie.net/es.pokemon/images/6/61/Logo_de_Pok%C3%A9mon_(EN).png/revision/20160319183155" width="500" height="200" />
+    </div>
+    <a href="http://localhost:56097/Stores"><img src="http://imagenpng.com/wp-content/uploads/2016/09/Pokebola-pokeball-png-0.png" width="50" height="50" /></a>
+    <h3>@ViewData["nombre"] yo te eligo</h3>
+    <div class="pelea">
+        <div id="pokemon">
+            <img srcset=@ViewData["img2"] width="200" height="300" />
+            <div class="barrita">
+                <div id="progress" class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: @ViewData["vida"]%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pelea">
+        <div id="pokemon2">
+            <img src=@Html.DisplayFor(modelItem => item.Picture) width="200" height="300">
+            <div class="barrita">
+                <div id="progress" class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:@Html.DisplayFor(modelItem => item.vida)%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="boton">
+        <input type="button" id="atacar" value="Atacar" />
+    </div>
+</div>
+}
