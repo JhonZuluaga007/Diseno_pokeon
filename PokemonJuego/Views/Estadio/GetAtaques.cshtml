@@ -16,30 +16,13 @@
             $("#pokemon2").animate({ left: '500px' }, 1000, onRegresa);
         }
         function onRegresa(){
-            $("#pokemon").animate({ left: '0px' }, 1000);
+            $("#pokemon").animate({ left: '90px' }, 1000);
             $("#pokemon2").animate({ left: '1000px' }, 1000);
         }
-        function restar() {
-            $("#")
-        }
-
-        $('body').on('click', '[data-url]', function () {
-            $.ajax({
-                method: 'POST',
-                url: $(this).data('url')
-            })
-            .done(function (data) {
-                $('#poks').hide();
-                $('#poks').html(data);
-                $('#poks').show('fast');
-            });
-        })
-
-
-
-
 </script>
-
+<audio autoplay loop>
+    <source src="~/Musica/Pokemon.mp3" type="audio/mp3" />
+</audio>
 @foreach (var item in Model)
 {
 <div class="row">
