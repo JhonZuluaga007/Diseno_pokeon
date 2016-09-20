@@ -59,3 +59,8 @@ body{
     position:absolute;
     left:800px;
 }
+.center{
+    position:absolute;
+    left:500px;
+    top:500px;
+}
