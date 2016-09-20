@@ -36,7 +36,7 @@
             </td>
 
             <td>
-                @Html.ActionLink("Elegir", "GetAtaques", "Estadio", new { nombre = @Html.DisplayFor(modelItem => item.Pokemon.Name), img = @Html.DisplayFor(modelItem => item.Pokemon.Picture), vida = @Html.DisplayFor(modelItem => item.Pokemon.vida),power = @Html.DisplayFor(modelItem => item.Pokemon.vida) ,xx=0,d=0}, null)
+                @Html.ActionLink("Elegir", "GetAtaques", "Estadio", new { nombre = @Html.DisplayFor(modelItem => item.Pokemon.Name),id=@Html.DisplayFor(ModelItem=>item.Pokemon_id),img = @Html.DisplayFor(modelItem => item.Pokemon.Picture), vida = @Html.DisplayFor(modelItem => item.Pokemon.vida),power = @Html.DisplayFor(modelItem => item.Pokemon.vida) ,xx=0,d=0}, null)
             </td>
         </tr>
     }

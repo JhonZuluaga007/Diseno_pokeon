@@ -17,12 +17,12 @@ namespace PokemonJuego.Controllers
             return View();
         }
 
-        public ActionResult GetAtaques(string nombre, string img,int vida , int power)
+        public ActionResult GetAtaques(string nombre,int id, string img,int vida , int power)
         {
             Random a = new Random();
             int s = a.Next(1,3);
 
-
+            int id2 = id;
             string nombres = nombre;
             string img2 = img;
             int Power = power;
@@ -37,6 +37,7 @@ namespace PokemonJuego.Controllers
             ViewData["d"] = power;
            return View(stores.ToList());
         }
+
        
     }
 }
